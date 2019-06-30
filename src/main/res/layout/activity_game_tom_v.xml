@@ -20,8 +20,8 @@
             android:id="@+id/stageIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:text="@string/stage_one_choose"
+            android:layout_alignParentStart="true"
+            android:text="@string/tom_stage_one_choose"
             android:textSize="30sp" />
 
     </RelativeLayout>
@@ -31,7 +31,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@+id/indicatorLayout"
         app:layout_constraintTop_toTopOf="@+id/indicatorLayout">
@@ -87,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/red_flower" />
 
@@ -126,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_cross" />
 
@@ -135,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/yellow_flower" />
 
@@ -144,7 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/yellow_diamond" />
 
@@ -153,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/green_cross" />
 
@@ -184,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/green_flower" />
 
@@ -193,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/red_star" />
 
@@ -202,7 +201,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/green_star" />
 
@@ -211,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/yellow_diamond" />
 
@@ -242,7 +241,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/red_flower" />
 
@@ -251,7 +250,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_flower" />
 
@@ -260,7 +259,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/red_star" />
 
@@ -269,7 +268,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/green_flower" />
 
@@ -300,7 +299,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_star" />
 
@@ -309,7 +308,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/red_diamond" />
 
@@ -318,7 +317,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_flower" />
 
@@ -327,7 +326,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_diamond" />
 
@@ -366,7 +365,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:contentDescription="@string/board_block"
+                    android:contentDescription="@string/tom_board_block"
                     android:onClick="onClickToMove"
                     app:srcCompat="@drawable/cyan_diamond" />
 
@@ -422,22 +421,22 @@
                     android:id="@+id/button2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="goBackOneMove"
-                    android:text="@string/go_back_one_movement" />
+                    android:onClick="onClickUndo"
+                    android:text="@string/tom_go_back_one_movement" />
 
                 <Button
                     android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="saveCurrentGame"
-                    android:text="@string/game_save" />
+                    android:enabled="false"
+                    android:text="@string/tom_game_save" />
 
                 <Button
                     android:id="@+id/button4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="loadCurrentGame"
-                    android:text="@string/game_load" />
+                    android:enabled="false"
+                    android:text="@string/tom_game_load" />
             </LinearLayout>
 
             <LinearLayout
@@ -450,22 +449,22 @@
                     android:id="@+id/button3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="resetCurrentStageForButton"
-                    android:text="@string/game_restart" />
+                    android:onClick="onClickReset"
+                    android:text="@string/tom_game_restart" />
 
                 <Button
                     android:id="@+id/button5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="startGameStageOneViaButton"
-                    android:text="@string/stage_one_choose" />
+                    android:text="@string/tom_stage_one_choose" />
 
                 <Button
                     android:id="@+id/button6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="startGameStageTwoViaButton"
-                    android:text="@string/stage_two_choose" />
+                    android:text="@string/tom_stage_two_choose" />
 
             </LinearLayout>
 
@@ -480,23 +479,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/number_of_goals" />
+                    android:text="@string/tom_number_of_goals" />
 
                 <TextView
                     android:id="@+id/textViewMovements"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/number_of_movements" />
+                    android:text="@string/tom_number_of_movements" />
 
                 <Switch
                     android:id="@+id/switchSoundOnOff"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/sound_control"
-                    android:textOff="@string/sound_off"
-                    android:textOn="@string/sound_on" />
+                    android:text="@string/tom_sound_control"
+                    android:textOff="@string/tom_sound_off"
+                    android:textOn="@string/tom_sound_on" />
 
             </LinearLayout>
         </LinearLayout>

@@ -312,6 +312,16 @@ public class GameActivityTomV extends AppCompatActivity {
         exit();
     }
 
+    public void startGameStageOneViaButton(View v){
+        sfx.bgm_stop();
+        setLevel("levelOne");
+    }
+
+    public void startGameStageTwoViaButton(View v){
+        sfx.bgm_stop();
+        setLevel("levelTwo");
+    }
+
     private void exit(){
         android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
         builder.setMessage("Are you sure?\n" +
