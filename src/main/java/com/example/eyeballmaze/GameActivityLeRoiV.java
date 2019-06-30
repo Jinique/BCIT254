@@ -60,7 +60,7 @@ public class GameActivityLeRoiV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_tom_v);
 
-        move_counter = findViewById(R.id.move_counter2);
+        move_counter = findViewById(R.id.textViewMovements);
         goal_counter = findViewById(R.id.textViewGoals);
         soundSwitch = findViewById(R.id.switchSoundOnOff);
 
@@ -74,7 +74,9 @@ public class GameActivityLeRoiV extends AppCompatActivity {
         completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
 
-        //run();
+        run();
+
+
     }
 
     //////////////////       level selection       //////////////////
@@ -200,12 +202,12 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     }
 
     private void updateMoveCount(){
-        //move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
+        move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
         //textViewForGoal.setText(getString(R.string.number_of_goals, board.getGoals()-1));
     }
 
     private void updateGoalCount(){
-        //goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
+        goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
         //goal_counter.setText(String.valueOf(model.getGoalCount()));
     }
 
