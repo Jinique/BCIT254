@@ -83,7 +83,7 @@ public class GameActivityManualProto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_manual);
+        setContentView(R.layout.activity_game_manual_proto);
 
         btnReset = findViewById(R.id.btn_reset);
         btnSave = findViewById(R.id.btn_save);

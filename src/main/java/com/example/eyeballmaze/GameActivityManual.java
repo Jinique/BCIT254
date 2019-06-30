@@ -58,7 +58,7 @@ public class GameActivityManual extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_game_manual);
 
         move_counter = findViewById(R.id.move_counter2);
         goal_counter = findViewById(R.id.goal_counter2);
@@ -291,7 +291,7 @@ public class GameActivityManual extends AppCompatActivity {
     }
 
     public void onClickSolution(View v){
-        solve(getIntent().getStringExtra("GAME_LEVEL"));
+        solve();
     }
 
     public void onClickUndo(View v){
@@ -470,10 +470,10 @@ public class GameActivityManual extends AppCompatActivity {
         alertDialog.show();
     }
 
-    private void solve(String level){
+    private void solve(){
         sfx.bgm_stop();
         setLevel(currentLevel);
-        switch (level){
+        switch (currentLevel){
             case "levelOne":
                 solveOne();
                 break;
@@ -481,6 +481,7 @@ public class GameActivityManual extends AppCompatActivity {
                 solveTwo();
                 break;
             default:
+                alert("no solution available");
                 break;
         }
     }

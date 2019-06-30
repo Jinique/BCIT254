@@ -319,7 +319,7 @@ public class GameActivityProgrammatic extends AppCompatActivity {
     }
 
     public void onClickSolution(View v){
-        solve(getIntent().getStringExtra("GAME_LEVEL"));
+        solve();
     }
 
     public void onClickUndo(View v){
@@ -498,10 +498,10 @@ public class GameActivityProgrammatic extends AppCompatActivity {
         alertDialog.show();
     }
 
-    private void solve(String level){
+    private void solve(){
         sfx.bgm_stop();
         setLevel(currentLevel);
-        switch (level){
+        switch (currentLevel){
             case "levelOne":
                 solveOne();
                 break;
@@ -509,6 +509,7 @@ public class GameActivityProgrammatic extends AppCompatActivity {
                 solveTwo();
                 break;
             default:
+                alert("no solution available");
                 break;
         }
     }
@@ -551,5 +552,4 @@ public class GameActivityProgrammatic extends AppCompatActivity {
             @Override
             public void run() {imageViews[2][0].performClick();}},4000);
     }
-
 }
