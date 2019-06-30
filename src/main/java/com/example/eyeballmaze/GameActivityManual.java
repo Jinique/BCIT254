@@ -131,7 +131,8 @@ public class GameActivityManual extends AppCompatActivity {
         drawGoal();
         drawPlayer(model.getPlayerX(), model.getPlayerY());
         update();
-        //countdown();
+        countdown();
+
     }
 
     private void countdown(){
