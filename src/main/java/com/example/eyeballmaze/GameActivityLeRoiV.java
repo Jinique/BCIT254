@@ -37,8 +37,10 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     Switch soundSwitch;
 
     // BOTTOM BAR
+    private Button btnReset;
+    private Button btnSolution;
     private Button btnUndo;
-
+    private Button btnExit;
 
     // Map image layout
     ImageView[][] imageViews = new ImageView[4][6];
@@ -47,6 +49,7 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     private ConstraintLayout completeSplash;
     private ConstraintLayout failedSplash;
     private ConstraintLayout botBar;
+    private TextView completeMessage;
     private String selection;
 
     // game state
@@ -55,21 +58,23 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_le_roi_v);
+        setContentView(R.layout.activity_game_tom_v);
 
-        move_counter = findViewById(R.id.labelNumCounterMoves);
-        goal_counter = findViewById(R.id.labelNumGoalsLeft);
-        soundSwitch = findViewById(R.id.switchSound);
+        move_counter = findViewById(R.id.move_counter2);
+        goal_counter = findViewById(R.id.textViewGoals);
+        soundSwitch = findViewById(R.id.switchSoundOnOff);
 
-        btnUndo = findViewById(R.id.btnUndo);
+        btnReset = findViewById(R.id.btn_reset);
+        btnSolution = findViewById(R.id.btn_solution);
+        btnUndo = findViewById(R.id.button2);
+        btnExit = findViewById(R.id.btn_exit);
 
         botBar = findViewById(R.id.botBar);
         completeSplash = findViewById(R.id.completeSplash);
+        completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
 
-        run();
-
-
+        //run();
     }
 
     //////////////////       level selection       //////////////////
@@ -190,16 +195,18 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     }
 
     private void update(){
-        //updateMoveCount();
-        //updateGoalCount();
+        updateMoveCount();
+        updateGoalCount();
     }
 
     private void updateMoveCount(){
-        move_counter.setText(model.getMoveCount());
+        move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
+        //textViewForGoal.setText(getString(R.string.number_of_goals, board.getGoals()-1));
     }
 
     private void updateGoalCount(){
-        goal_counter.setText(model.getGoalCount());
+        goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
+        //goal_counter.setText(String.valueOf(model.getGoalCount()));
     }
 
     //////////////////       onClickMove       //////////////////
