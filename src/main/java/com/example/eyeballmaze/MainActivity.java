@@ -1,5 +1,6 @@
 package com.example.eyeballmaze;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,110 +54,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onNewGameOtherButtonClick(View v){
-        final String[] listItems = this.getResources().getStringArray(R.array.select_lvl_array);
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
-
-        builder.setTitle(R.string.select_lvl);
-        builder.setSingleChoiceItems(R.array.select_lvl_array, -1, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                selection = listItems[which];
-            }
-        });
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Selected Level : " + selection, Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(getBaseContext(),   GameActivityTomV.class);
-                myIntent.putExtra("GAME_LEVEL", selection);
-                startActivity(myIntent);
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        android.app.AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-    public void onNewGameManualButtonClick(View v){
-        final String[] listItems = this.getResources().getStringArray(R.array.select_lvl_array);
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
-
-        builder.setTitle(R.string.select_lvl);
-        builder.setSingleChoiceItems(R.array.select_lvl_array, -1, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                selection = listItems[which];
-            }
-        });
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Selected Level : " + selection, Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(getBaseContext(),   GameActivityManual.class);
-                myIntent.putExtra("GAME_LEVEL", selection);
-                startActivity(myIntent);
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        android.app.AlertDialog dialog = builder.create();
-        dialog.show();
+        simpleLauncher(GameActivityTomV.class);
+        //launcher(GameActivityTomV.class);
     }
 
     public  void onNewGameProgrammaticButtonClick(View v){
-        final String[] listItems = this.getResources().getStringArray(R.array.select_lvl_array);
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        launcher(GameActivityProgrammatic.class);
+    }
 
-        builder.setTitle(R.string.select_lvl);
-        builder.setSingleChoiceItems(R.array.select_lvl_array, -1, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                selection = listItems[which];
-            }
-        });
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "Selected Level : " + selection, Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(getBaseContext(),   GameActivityProgrammatic.class);
-                myIntent.putExtra("GAME_LEVEL", selection);
-                startActivity(myIntent);
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        android.app.AlertDialog dialog = builder.create();
-        dialog.show();
+    public void onNewGameManualButtonClick(View v){
+        launcher(GameActivityManual.class);
     }
 
     public void onNewGameManualProtoButtonClick(View v){
-        Intent myIntent = new Intent(getBaseContext(),   GameActivityManualProto.class);
-        startActivity(myIntent);
+        simpleLauncher(GameActivityManualProto.class);
     }
 
 
     public void onTutorialButtonClick(View v){
-        Intent myIntent = new Intent(getBaseContext(),   TutorialActivity.class);
-        startActivity(myIntent);
+        simpleLauncher(TutorialActivity.class);
     }
 
     public void exitButtonGenerator(){
@@ -179,6 +95,43 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.setTitle("Quit game");
         alert.show();
+    }
+
+    private void launcher(final Class cls){
+        final String[] listItems = this.getResources().getStringArray(R.array.select_lvl_array);
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+
+        builder.setTitle(R.string.select_lvl);
+        builder.setSingleChoiceItems(R.array.select_lvl_array, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                selection = listItems[which];
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "Selected Level : " + selection, Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(getBaseContext(), cls);
+                myIntent.putExtra("GAME_LEVEL", selection);
+                startActivity(myIntent);
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        android.app.AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void simpleLauncher(Class cls){
+        Intent myIntent = new Intent(getBaseContext(), cls);
+        startActivity(myIntent);
     }
 
     public void onDestroy()

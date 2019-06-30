@@ -44,8 +44,8 @@ public class GameActivityTomV extends AppCompatActivity {
     private Button btnExit;
 
     // Map image layout
-    ImageView[][] imageViews = new ImageView[4][6];
-    int[][] imageSrc = new int[4][6];
+    ImageView[][] imageViews = new ImageView[6][6];
+    int[][] imageSrc = new int[6][6];
 
     private ConstraintLayout completeSplash;
     private ConstraintLayout failedSplash;
@@ -59,8 +59,9 @@ public class GameActivityTomV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_manual);
+        setContentView(R.layout.activity_game_tom_v);
 
+        /*
         move_counter = findViewById(R.id.move_counter2);
         goal_counter = findViewById(R.id.goal_counter2);
         soundSwitch = findViewById(R.id.soundSwitch);
@@ -74,7 +75,7 @@ public class GameActivityTomV extends AppCompatActivity {
         completeSplash = findViewById(R.id.completeSplash);
         completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
-
+*/
         run();
     }
 
