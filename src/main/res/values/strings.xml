@@ -73,6 +73,7 @@ The go-back-one-move function takes you back a move, but you can click on it rep
     <string name="LeRoi_no_of_moves">Number of Moves Left:</string>
     <string name="LeRoi_no_of_goals">Number of goals left:</string>
     <string name="LeRoi_move_counter">Move Counter:</string>
+    <string name="LeRoi_place_holder">hahahaha</string>
 
 
 
