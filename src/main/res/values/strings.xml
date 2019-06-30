@@ -31,6 +31,7 @@
     <string name="fail">Bad luck, click to see more options</string>
     <string name="game_over">GAME OVER</string>
     <string name="complete_message">Congrats!! You have cleared with</string>
+    <string name="rules">Rules</string>
     <string name="description"> That circle with the two little eyeballs is you. The eyeballs show which direction you’re facing. What you have to do is make a series of moves that will get you onto the square (or squares) marked GOAL. To indicate your move, click on the square you are moving to. \n \n
 
 You can move horizontally or vertically for any distance, as long as you do not move over any blank spaces. However, you can only end your move on a square that has either the same symbol or the same color as the square your move started on (moving to both the same symbol and the same color is also okay). You can move straight ahead or to your right or left, but you may not move to a square that is behind you. If you move to the right or left, your eyeballs will then be pointing in a new direction.  \n \n
@@ -38,8 +39,6 @@ You can move horizontally or vertically for any distance, as long as you do not 
 Mazes with two or more goals are tricky. You must visit every goal to solve the maze; so after you visit one goal, you will then want to move on to reach another goal. But when you leave the goal you visited, something unusual happens: the square disappears and is replaced with a blank. This complicates things because you’re not allowed to travel over blank squares. \n \n
 
 The go-back-one-move function takes you back a move, but you can click on it repeatedly to go back several moves. \n \n \n</string>
-    <string name="rules">Rules</string>
-
 
     <string name="tom_app_name">EyeBallMaze</string>
     <string name="tom_game_start">Start</string>
@@ -62,8 +61,12 @@ The go-back-one-move function takes you back a move, but you can click on it rep
     <string name="tom_time_taken">00:00:00</string>
     <string name="tom_tutorial">Tutorial</string>
 
-
-
+    <string name="LeRoi_app_name">EyeBall</string>
+    <string name="LeRoi_btn_start_text">Start Game</string>
+    <string name="LeRoi_btn_load_text">Help</string>
+    <string name="LeRoi_sound">Sound</string>
+    <string name="LeRoi_sound_off">sound_off</string>
+    <string name="LeRoi_sound_on">sound_on</string>
 
 
 </resources>
