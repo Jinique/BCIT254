@@ -99,7 +99,6 @@ public class Model {
 
     private void setGoalCount(int i) {
         numberOfGoals = i;
-        // goal_counter.setText("" + numberOfGoals);
     }
 
     public int getGoalCount() {

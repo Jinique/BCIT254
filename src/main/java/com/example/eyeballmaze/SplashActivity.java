@@ -10,7 +10,7 @@ import com.example.eyeballmaze.model.SFX;
 import com.example.eyeballmaze.model.SplashScreen;
 
 public class SplashActivity extends AppCompatActivity {
-    private SplashScreen splashScreen;
+    SplashScreen splashScreen;
     SFX sfx = new SFX();
     Handler handler = new Handler();
 

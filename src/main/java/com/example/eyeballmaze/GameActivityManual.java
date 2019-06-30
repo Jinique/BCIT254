@@ -186,7 +186,8 @@ public class GameActivityManual extends AppCompatActivity {
     }
 
     private void drawOriginalBlock (){
-        imageViews[model.getPlayerX()][model.getPlayerY()].setImageBitmap(BitmapFactory.decodeResource(getResources(), imageSrc[model.getPlayerX()][model.getPlayerY()]));
+        imageViews[model.getPlayerX()][model.getPlayerY()].setImageBitmap(BitmapFactory.
+                decodeResource(getResources(), imageSrc[model.getPlayerX()][model.getPlayerY()]));
     }
 
     private void setDoubleImageInMaze(int col, int row, int src) {
