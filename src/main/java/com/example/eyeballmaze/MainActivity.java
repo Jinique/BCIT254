@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onNewGameLeRoiButtonClick(View v){
-        simpleLauncher(GameActivityTomV.class);
+        simpleLauncher(GameActivityLeRoiV.class);
         //launcher(GameActivityTomV.class);
     }
 

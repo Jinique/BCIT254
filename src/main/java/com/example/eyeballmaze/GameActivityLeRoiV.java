@@ -34,13 +34,12 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     // TOP BAR
     private TextView move_counter;
     private TextView goal_counter;
+    private TextView available_move_counter;
     Switch soundSwitch;
 
     // BOTTOM BAR
-    private Button btnReset;
-    private Button btnSolution;
     private Button btnUndo;
-    private Button btnExit;
+
 
     // Map image layout
     ImageView[][] imageViews = new ImageView[4][6];
@@ -60,14 +59,12 @@ public class GameActivityLeRoiV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_le_roi_v);
 
-        move_counter = findViewById(R.id.move_counter2);
-        goal_counter = findViewById(R.id.goal_counter2);
-        soundSwitch = findViewById(R.id.soundSwitch);
+        move_counter = findViewById(R.id.labelNumCounterMoves);
+        goal_counter = findViewById(R.id.labelNumGoalsLeft);
+        available_move_counter = findViewById(R.id.labelNumMovesLeft);
+        soundSwitch = findViewById(R.id.switchSound);
 
-        btnReset = findViewById(R.id.btn_reset);
-        btnSolution = findViewById(R.id.btn_solution);
-        btnUndo = findViewById(R.id.btn_undo);
-        btnExit = findViewById(R.id.btn_exit);
+        btnUndo = findViewById(R.id.btnUndo);
 
         botBar = findViewById(R.id.botBar);
         completeSplash = findViewById(R.id.completeSplash);
@@ -81,7 +78,7 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     private void run(){
         bgmSwitch();
         //sfx.bgm_stop();
-        setLevel(getIntent().getStringExtra("GAME_LEVEL"));
+        setLevel("levelOne");
         handler.removeCallbacksAndMessages(null);
     }
 
@@ -122,8 +119,8 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     //////////////////       set level       //////////////////
     private void setLevel(String levelNumber){
         sfx.bgm(this, R.raw.game, true);
-        showCompleteSplash(false);
-        showFailedSplash(false);
+        //showCompleteSplash(false);
+        //showFailedSplash(false);
         setUndoBtn(false);
         model.setLevel(levelNumber);
         currentLevel = levelNumber;
@@ -211,6 +208,7 @@ public class GameActivityLeRoiV extends AppCompatActivity {
 
     private void updateMoveCount(){
         move_counter.setText(String.valueOf(model.getMoveCount()));
+        available_move_counter.setText(String.valueOf(15 - model.getMoveCount()));
     }
 
     private void updateGoalCount(){
@@ -274,14 +272,14 @@ public class GameActivityLeRoiV extends AppCompatActivity {
 
     private void stageClear() {
         sfx.bgm_stop();
-        showCompleteSplash(true);
-        completeMessage.setText(model.getMoveCount() + " moves");
+        // showCompleteSplash(true);
+        // completeMessage.setText(model.getMoveCount() + " moves");
         sfx.bgm(this, R.raw.win, false);
     }
 
     private void stageFailed(){
         sfx.bgm_stop();
-        showFailedSplash(true);
+        //showFailedSplash(true);
         sfx.bgm(this, R.raw.lose, false);
     }
 
