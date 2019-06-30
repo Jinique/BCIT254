@@ -44,8 +44,8 @@ public class GameActivityTomV extends AppCompatActivity {
     private Button btnExit;
 
     // Map image layout
-    ImageView[][] imageViews = new ImageView[6][6];
-    int[][] imageSrc = new int[6][6];
+    ImageView[][] imageViews = new ImageView[4][6];
+    int[][] imageSrc = new int[4][6];
 
     private ConstraintLayout completeSplash;
     private ConstraintLayout failedSplash;
@@ -61,10 +61,14 @@ public class GameActivityTomV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_tom_v);
 
+
+        soundSwitch = findViewById(R.id.switchSoundOnOff);
+
+
         /*
         move_counter = findViewById(R.id.move_counter2);
         goal_counter = findViewById(R.id.goal_counter2);
-        soundSwitch = findViewById(R.id.soundSwitch);
+
 
         btnReset = findViewById(R.id.btn_reset);
         btnSolution = findViewById(R.id.btn_solution);
@@ -76,13 +80,15 @@ public class GameActivityTomV extends AppCompatActivity {
         completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
 */
-        run();
+        //run();
+
+        sfx.bgm(this, R.raw.game, true);
     }
 
     //////////////////       level selection       //////////////////
     private void run(){
         bgmSwitch();
-        //sfx.bgm_stop();
+        sfx.bgm_stop();
         setLevel(getIntent().getStringExtra("GAME_LEVEL"));
         handler.removeCallbacksAndMessages(null);
     }

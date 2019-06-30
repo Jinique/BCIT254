@@ -493,6 +493,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:enabled="true"
                     android:text="@string/tom_sound_control"
                     android:textOff="@string/tom_sound_off"
                     android:textOn="@string/tom_sound_on" />
