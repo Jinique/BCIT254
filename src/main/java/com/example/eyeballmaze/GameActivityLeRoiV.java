@@ -200,12 +200,12 @@ public class GameActivityLeRoiV extends AppCompatActivity {
     }
 
     private void updateMoveCount(){
-        move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
+        //move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
         //textViewForGoal.setText(getString(R.string.number_of_goals, board.getGoals()-1));
     }
 
     private void updateGoalCount(){
-        goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
+        //goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
         //goal_counter.setText(String.valueOf(model.getGoalCount()));
     }
 
