@@ -471,27 +471,27 @@
             <LinearLayout
                 android:layout_width="122dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textViewGoals"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tom_number_of_goals" />
 
                 <TextView
                     android:id="@+id/textViewMovements"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tom_number_of_movements" />
 
                 <Switch
                     android:id="@+id/switchSoundOnOff"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tom_sound_control"
                     android:textOff="@string/tom_sound_off"
