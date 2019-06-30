@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">EYEBALL MAZE</string>
+    <string name="touch_screen">touch screen to continue</string>
+    <string name="desc_splash_background">Splash background image</string>
+    <string name="loading">LOADING\.\.\. \nplease wait</string>
+    <string name="new_game0">New Game(other\'s)</string>
+    <string name="new_game1">New Game(prog)</string>
+    <string name="new_game2">New Game (manual)</string>
+    <string name="new_game3">New Game (proto)</string>
+    <string name="new_game4">New Game (v5.0)</string>
+    <string name="load_game">Load Game</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="exit">Exit</string>
+    <string name="sound">BGM</string>
+    <string name="save">Save</string>
+    <string name="solution">Solution</string>
+    <string name="load">Load</string>
+    <string name="move_count">Moves : </string>
+    <string name="goal_count">Goals : </string>
+    <string name="_moves">%d moves</string>
+    <string name="timer">Timer</string>
+    <string name="empty_block">Empty block</string>
+    <string name="undo">Undo</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="cont">Continue</string>
+    <string name="reset">Reset</string>
+    <string name="stage_clear">STAGE CLEAR</string>
+    <string name="select_lvl">Please choose a level</string>
+    <string name="select_next">What\'s next!?</string>
+    <string name="fail">Bad luck, click to see more options</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="complete_message">Congrats!! You have cleared with</string>
+    <string name="description"> That circle with the two little eyeballs is you. The eyeballs show which direction you’re facing. What you have to do is make a series of moves that will get you onto the square (or squares) marked GOAL. To indicate your move, click on the square you are moving to. \n \n
+
+You can move horizontally or vertically for any distance, as long as you do not move over any blank spaces. However, you can only end your move on a square that has either the same symbol or the same color as the square your move started on (moving to both the same symbol and the same color is also okay). You can move straight ahead or to your right or left, but you may not move to a square that is behind you. If you move to the right or left, your eyeballs will then be pointing in a new direction.  \n \n
+
+Mazes with two or more goals are tricky. You must visit every goal to solve the maze; so after you visit one goal, you will then want to move on to reach another goal. But when you leave the goal you visited, something unusual happens: the square disappears and is replaced with a blank. This complicates things because you’re not allowed to travel over blank squares. \n \n
+
+The go-back-one-move function takes you back a move, but you can click on it repeatedly to go back several moves. \n \n \n</string>
+    <string name="rules">Rules</string>
+</resources>

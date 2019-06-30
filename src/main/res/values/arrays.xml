@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <array name="select_lvl_array">
+        <item>levelOne</item>
+        <item>levelTwo</item>
+        <item>levelThree</item>
+    </array>
+
+    <array name="gameover_array">
+        <item>Replay</item>
+        <item>Next Level</item>
+        <item>Quit</item>
+    </array>
+
+    <array name="gamelose_array">
+        <item>Replay</item>
+        <item>Quit</item>
+    </array>
+</resources>

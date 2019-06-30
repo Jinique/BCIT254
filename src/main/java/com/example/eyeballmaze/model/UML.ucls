@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="eyeballMaze.Game" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/Game.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="531" width="324" x="107" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="2" language="java" name="eyeballMaze.TileShape" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/TileShape.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="129" x="471" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="3" language="java" name="eyeballMaze.LevelHandler" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/LevelHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="164" x="640" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="eyeballMaze.Main" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="844" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="eyeballMaze.SFX" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/SFX.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="139" x="997" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="6" language="java" name="eyeballMaze.TileColour" project="EyeballMaze" 
+    file="/EyeballMaze/src/eyeballMaze/TileColour.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="123" x="1176" y="-13"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".GameActivityProgrammatic"
+    android:id="@+id/container">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="#55111111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Switch
+            android:id="@+id/soundSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:checked="true"
+            android:text="@string/sound"
+            android:textColor="#fff"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/move_counter"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/move_count"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/move_counter2"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/move_counter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goal_counter"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/goal_count"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/move_counter2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goal_counter2"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/goal_counter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        app:layout_constraintBottom_toTopOf="@+id/botBar"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow0">
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow1">
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow2">
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow3">
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow4">
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content"
+            android:id="@+id/tableRow5">
+        </TableRow>
+
+    </TableLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/botBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="onClickReset"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_solution"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="onClickSolution"
+            android:text="@string/solution"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_reset"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:enabled="false"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="@string/undo"
+            android:onClick="onClickUndo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_solution"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="onClickExit"
+            android:text="@string/exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_undo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_weight="1"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/completeSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        android:background="#cc111111"
+        android:onClick="onClickToMove"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stage_clear"
+            android:textSize="90sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/chubby_dotty"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/completeMessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_message"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/completeMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/completeMessage1" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/failedSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        android:background="#cc111111"
+        android:onClick="onClickToMove"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/failedMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_over"
+            android:textSize="90sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/chubby_dotty"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/failedMessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fail"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/failedMsg" />
+
+        <TextView
+            android:id="@+id/failedMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/failedMessage1" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
