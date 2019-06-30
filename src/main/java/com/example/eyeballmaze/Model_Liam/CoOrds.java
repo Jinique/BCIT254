@@ -1,4 +1,4 @@
-package com.example.eyeballmaze.OtherModel;
+package com.example.eyeballmaze.Model_Liam;
 
 public class CoOrds {
 	public int x, y;

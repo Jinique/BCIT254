@@ -39,4 +39,31 @@ Mazes with two or more goals are tricky. You must visit every goal to solve the 
 
 The go-back-one-move function takes you back a move, but you can click on it repeatedly to go back several moves. \n \n \n</string>
     <string name="rules">Rules</string>
+
+
+    <string name="tom_app_name">EyeBallMaze</string>
+    <string name="tom_game_start">Start</string>
+    <string name="tom_game_restart">Restart Stage</string>
+    <string name="tom_go_back_one_movement">Go back once</string>
+    <string name="tom_sound_control">Sound</string>
+    <string name="tom_board_block">This is a clickable board block</string>
+    <string name="tom_empty_block">This is an empty block, cannot move to here</string>
+    <string name="tom_game_manual">Manually</string>
+    <string name="tom_game_auto">Programmatically</string>
+    <string name="tom_sound_on">On</string>
+    <string name="tom_sound_off">Off</string>
+    <string name="tom_game_save">Save</string>
+    <string name="tom_game_load">Load</string>
+    <string name="tom_stage_one_choose">Stage 1</string>
+    <string name="tom_stage_two_choose">Stage 2</string>
+    <string name="tom_number_of_goals">Number of Goal(s) : %1$d</string>
+    <string name="tom_number_of_movements">Number of Movements : %1$d</string>
+    <string name="tom_movements_left">Movements left : %1$d</string>
+    <string name="tom_time_taken">00:00:00</string>
+    <string name="tom_tutorial">Tutorial</string>
+
+
+
+
+
 </resources>

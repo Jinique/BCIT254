@@ -1,24 +1,25 @@
-package com.example.eyeballmaze.OtherModel;
+package com.example.eyeballmaze.Model_Liam;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Goal {
-	Open("G"),
-	NaG(" "),
-	Done("X");
+public enum Shapes {
+	Triangle("T"),
+	Diamond("D"),
+	Plus("P"),
+	Star("S");
 	
 	public final String abbreviation;
 	
-	private static final Map<String, Goal> lookup = new HashMap<String, Goal>();
+	private static final Map<String, Shapes> lookup = new HashMap<String, Shapes>();
 	
 	static {
-        for (Goal d : Goal.values()) {
+        for (Shapes d : Shapes.values()) {
             lookup.put(d.getAbbreviation(), d);
         }
     }
 	
-	Goal(String abbreviation){
+	Shapes(String abbreviation){
 		this.abbreviation = abbreviation;
 	}
 	
@@ -26,7 +27,7 @@ public enum Goal {
         return abbreviation;
     }
 
-    public static Goal get(String abbreviation) {
+    public static Shapes get(String abbreviation) {
         return lookup.get(abbreviation);
     }
 }

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this, "Selected Level : " + selection, Toast.LENGTH_SHORT).show();
-                Intent myIntent = new Intent(getBaseContext(),   GameActivityOther.class);
+                Intent myIntent = new Intent(getBaseContext(),   GameActivityTomV.class);
                 myIntent.putExtra("GAME_LEVEL", selection);
                 startActivity(myIntent);
             }

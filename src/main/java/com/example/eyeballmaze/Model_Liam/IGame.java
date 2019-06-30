@@ -1,4 +1,4 @@
-package com.example.eyeballmaze.OtherModel;
+package com.example.eyeballmaze.Model_Liam;
 
 public interface IGame {
 	Integer getRowCount();
