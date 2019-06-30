@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         sfx.bgm(this, R.raw.main, true);
     }
 
+    public void onNewGameLeRoiButtonClick(View v){
+        simpleLauncher(GameActivityTomV.class);
+        //launcher(GameActivityTomV.class);
+    }
+
     public void onNewGameOtherButtonClick(View v){
         simpleLauncher(GameActivityTomV.class);
         //launcher(GameActivityTomV.class);
