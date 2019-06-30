@@ -1,5 +1,7 @@
 package com.example.eyeballmaze.model;
 
+import java.util.Arrays;
+
 public class Model {
 
     private LevelHandler levelHandler = new LevelHandler();

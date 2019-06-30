@@ -61,25 +61,20 @@ public class GameActivityTomV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_tom_v);
 
-
+        move_counter = findViewById(R.id.textViewMovements);
+        goal_counter = findViewById(R.id.textViewGoals);
         soundSwitch = findViewById(R.id.switchSoundOnOff);
-
-
-        /*
-        move_counter = findViewById(R.id.move_counter2);
-        goal_counter = findViewById(R.id.goal_counter2);
-
 
         btnReset = findViewById(R.id.btn_reset);
         btnSolution = findViewById(R.id.btn_solution);
-        btnUndo = findViewById(R.id.btn_undo);
+        btnUndo = findViewById(R.id.button2);
         btnExit = findViewById(R.id.btn_exit);
 
         botBar = findViewById(R.id.botBar);
         completeSplash = findViewById(R.id.completeSplash);
         completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
-*/
+
         run();
 
 
@@ -130,8 +125,8 @@ public class GameActivityTomV extends AppCompatActivity {
     //////////////////       set level       //////////////////
     private void setLevel(String levelNumber){
         sfx.bgm(this, R.raw.game, true);
-        showCompleteSplash(false);
-        showFailedSplash(false);
+        //showCompleteSplash(false);
+        //showFailedSplash(false);
         setUndoBtn(false);
         model.setLevel(levelNumber);
         currentLevel = levelNumber;
@@ -139,18 +134,8 @@ public class GameActivityTomV extends AppCompatActivity {
         drawGoal();
         drawPlayer(model.getPlayerX(), model.getPlayerY());
         update();
-        //countdown();
     }
 
-    private void countdown(){
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                model.setLoseState(true);
-                stageFailed();
-            }
-        },86*1000);
-    }
 
     private void setMap(){
         for (int i = 0; i < model.getMapY(); i++){
@@ -218,11 +203,13 @@ public class GameActivityTomV extends AppCompatActivity {
     }
 
     private void updateMoveCount(){
-        move_counter.setText(String.valueOf(model.getMoveCount()));
+        move_counter.setText(getString(R.string.tom_number_of_movements, model.getMoveCount()));
+        //textViewForGoal.setText(getString(R.string.number_of_goals, board.getGoals()-1));
     }
 
     private void updateGoalCount(){
-        goal_counter.setText(String.valueOf(model.getGoalCount()));
+        goal_counter.setText(getString(R.string.tom_number_of_goals, model.getGoalCount()));
+        //goal_counter.setText(String.valueOf(model.getGoalCount()));
     }
 
     //////////////////       onClickMove       //////////////////
@@ -282,14 +269,14 @@ public class GameActivityTomV extends AppCompatActivity {
 
     private void stageClear() {
         sfx.bgm_stop();
-        showCompleteSplash(true);
-        completeMessage.setText(model.getMoveCount() + " moves");
+        //showCompleteSplash(true);
+        //completeMessage.setText(model.getMoveCount() + " moves");
         sfx.bgm(this, R.raw.win, false);
     }
 
     private void stageFailed(){
         sfx.bgm_stop();
-        showFailedSplash(true);
+        //showFailedSplash(true);
         sfx.bgm(this, R.raw.lose, false);
     }
 
