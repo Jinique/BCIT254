@@ -80,16 +80,16 @@ public class GameActivityTomV extends AppCompatActivity {
         completeMessage = findViewById(R.id.completeMessage2);
         failedSplash = findViewById(R.id.failedSplash);
 */
-        //run();
+        run();
 
-        sfx.bgm(this, R.raw.game, true);
+
     }
 
     //////////////////       level selection       //////////////////
     private void run(){
         bgmSwitch();
-        sfx.bgm_stop();
-        setLevel(getIntent().getStringExtra("GAME_LEVEL"));
+        // sfx.bgm_stop();
+        setLevel("levelOne");
         handler.removeCallbacksAndMessages(null);
     }
 
