@@ -7,7 +7,7 @@
     <string name="new_game1">New Game(prog)</string>
     <string name="new_game2">New Game (manual)</string>
     <string name="new_game3">New Game (proto)</string>
-    <string name="new_game4">New Game (v5.0)</string>
+    <string name="new_game4">New Game(LeRoi\'s V)</string>
     <string name="load_game">Load Game</string>
     <string name="tutorial">Tutorial</string>
     <string name="exit">Exit</string>
@@ -67,6 +67,14 @@ The go-back-one-move function takes you back a move, but you can click on it rep
     <string name="LeRoi_sound">Sound</string>
     <string name="LeRoi_sound_off">sound_off</string>
     <string name="LeRoi_sound_on">sound_on</string>
+    <string name="LeRoi_restart">Restart</string>
+    <string name="LeRoi_undo">Undo</string>
+    <string name="LeRoi_load">Load</string>
+    <string name="LeRoi_no_of_moves">Number of Moves Left:</string>
+    <string name="LeRoi_no_of_goals">Number of goals left:</string>
+    <string name="LeRoi_move_counter">Move Counter:</string>
+
+
 
 
 </resources>

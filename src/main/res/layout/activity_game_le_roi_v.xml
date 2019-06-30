@@ -6,4 +6,357 @@
     android:layout_height="match_parent"
     tools:context=".GameActivityLeRoiV">
 
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSolution"
+        android:text="@string/solution"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="@+id/btnUndo"
+        app:layout_constraintTop_toBottomOf="@+id/btnUndo" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickReset"
+        android:text="@string/LeRoi_restart"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/btnUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickUndo"
+        android:text="@string/LeRoi_undo"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btnRestart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/switchSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:checked="true"
+        android:text="@string/LeRoi_sound"
+        android:textOff="@string/LeRoi_sound_off"
+        android:textOn="@string/LeRoi_sound_on"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/labelMoveCounterText"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LeRoi_load"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave" />
+
+    <TextView
+    android:id="@+id/labelNumMovesText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/LeRoi_no_of_moves"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="@+id/frameLayout"
+    app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/labelNumMovesLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/labelNumMovesText"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/labelNumberOfGoalsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/LeRoi_no_of_goals"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/labelNumMovesText" />
+
+    <TextView
+        android:id="@+id/labelNumGoalsLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/labelNumberOfGoalsText"
+        app:layout_constraintTop_toBottomOf="@+id/labelNumMovesLeft" />
+
+    <TextView
+        android:id="@+id/labelMoveCounterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/LeRoi_move_counter"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/labelNumberOfGoalsText" />
+
+    <TextView
+        android:id="@+id/labelNumCounterMoves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/labelMoveCounterText"
+        app:layout_constraintTop_toBottomOf="@+id/labelNumGoalsLeft" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnRestart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile00"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile10"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile20"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile30"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile01"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile11"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile21"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile31"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile02"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile12"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile22"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile32"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile03"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile13"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile23"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile33"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile04"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile14"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile24"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile34"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gameTile05"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile15"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile25"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+            <ImageView
+                android:id="@+id/gameTile35"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/empty_block"
+                android:onClick="onClickToMove"
+                app:srcCompat="@drawable/empty_block" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="360dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
 </android.support.constraint.ConstraintLayout>
